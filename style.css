@@ -13,6 +13,12 @@ body {
   background-attachment: fixed;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Header */
 header {
   background: #000;
@@ -66,7 +72,7 @@ header nav a:hover {
   max-width: 90vw; /* Mais fluido, ajusta à tela */
   margin: 0 auto;
   position: relative;
-  height: 850px; /* Sua config */
+  height: auto; /* Sua config */
   overflow: hidden;
 }
 
@@ -78,21 +84,24 @@ header nav a:hover {
 }
 
 .slide {
-  min-width: calc(85vw - 80px); /* Ajustado pra ser mais largo e fluido */
-  width: calc(85vw - 80px);
+  aspect-ratio: 3 / 2;
+  min-width: 1200px; /* Ajustado pra ser mais largo e fluido */
+  width: 1200px;
   position: relative;
   background: #1a1a1a;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   height: 100%;
+  overflow: hidden;
   margin-right: 80px; /* Sua config */
   flex-shrink: 0;
 }
 
 .slide img {
   width: 100%;
-  height: 800px; /* Sua config */
+  height: 100%; /* Sua config */
+  max-height: 800px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
