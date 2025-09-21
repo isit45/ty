@@ -14,6 +14,11 @@ function mostrarSlide(n) {
     const inner = slide.querySelector('.flip-inner');
     if (inner) inner.classList.remove('flipped');
   });
+  // Corrige visibilidade dos slides
+  slides.forEach((slide, index) => {
+    slide.style.opacity = index === slideIndex ? '1' : '0';
+    slide.style.pointerEvents = index === slideIndex ? 'auto' : 'none';
+  });
 }
 
 prev.addEventListener("click", (e) => {
@@ -31,7 +36,7 @@ slides.forEach(slide => {
   slide.addEventListener('click', (e) => {
     if (e.target.classList.contains('prev') || e.target.classList.contains('next')) return;
     const inner = slide.querySelector('.flip-inner');
-    if (inner) inner.classList.toggle('flipped');
+    if (inner && slide.style.opacity === '1') inner.classList.toggle('flipped');
   });
 });
 
