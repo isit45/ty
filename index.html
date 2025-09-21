@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codimbus - Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="logo da empresa">
+    </div>
+  
+    <!-- Botão hambúrguer -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+  
+    <nav id="menu">
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#jogo">Quem Somos</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#mvv">MVV</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+<!-- Carrossel -->
+<section id="home" class="carrossel">
+  <div class="carrossel-container">
+    <div class="slides">
+      <div class="slide flip-card ativo">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/codimbus.jpeg" alt="Apresentação empresa Codimbus">
+            <div class="texto">
+              <h1>Quem Somos</h1>
+              <p>Prezamos pela criatividade, alinhando inovação, qualidade e foco no cliente.</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <h2>Mais sobre Nós</h2>
+            <p>A Codimbus, fundada em 2023, foca em jogos indie inovadores. Conheça nossa jornada!</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/jogo.jpg" alt="Gameplay">
+            <div class="texto">
+              <h1>Nosso primeiro Jogo</h1>
+              <p>Em breve, com gameplay imersiva e história surpreendente.</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <h2>Detalhes do Jogo</h2>
+            <p>Mundos abertos, mecânicas únicas. Lançamento em 2026!</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/time.jpg" alt="Foto da equipe">
+            <div class="texto">
+              <h1>Conheça nossa Equipe</h1>
+              <p>Time preparado pra transformar ideias em jogos.</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <h2>Sobre a Equipe</h2>
+            <p>Especialistas em Unity, design e narrativa!</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="assets/contato.jpg" alt="Informações de contato">
+            <div class="texto">
+              <h1>Fale Conosco</h1>
+              <p>Siga-nos no Instagram, Twitter e YouTube!</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <h2>Contato Rápido</h2>
+            <p>Email: contato@codimbus.com | Tel: (11) 99999-9999</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="controles">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </div>
+</section>
+  
+  <!-- Equipe -->
+  <section id="equipe" class="container">
+    <h2>Nossa Equipe</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/equipe/ryu.jpeg" alt="Dev 1">
+        <h3>Daniel Ryu Tanabe da Silva </h3>
+        <p>Game Development</p>
+      </div>
+      <div class="card">
+        <img src="assets/equipe/cafazzi.jpeg" alt="Dev 2">
+        <h3>Igor Cafazzi R. da Silva</h3>
+        <p>Level Designer</p>
+      </div>
+      <div class="card">
+        <img src="assets/equipe/guiffons.jpeg" alt="Dev 3">
+        <h3>Guilherme Fonseca da Silva</h3>
+        <p>Concept Artist</p>
+      </div>
+      <div class="card">
+        <img src="assets/equipe/queiroz.jpeg" alt="Dev 4">
+        <h3>Bruno Queiroz Plata</h3>
+        <p>Web Development</p>
+      </div>
+      <div class="card">
+        <img src="assets/equipe/kenji.jpeg" alt="Dev 5">
+        <h3>Henrique Kenji Targino Hamatu</h3>
+        <p>3D Modeller</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a empresa -->
+  <section id="jogo" class="container sobre">
+    <h2>Quem Somos</h2>
+    <p>
+      A Codimbus é uma empresa de desenvolvimento de jogos que transforma ideias em experiências inovadoras. Unimos criatividade, tecnologia e inovação para criar jogos envolventes, desafiadores e inspiradores. Nosso ambiente dinâmico e conectado nos impulsiona a explorar novas possibilidades e deixar nossa marca no mundo dos games.
+    </p>
+  </section>
+
+  <!-- Missão Visão e Valores -->
+  <section id="mvv" class="container">
+    <h2>Missão, Visão e Valores</h2>
+    <div class="mvv-cards">
+      <div class="mvv-card">
+        <h3>Missão</h3>
+        <p>Buscamos proporcionar experiências únicas e imersivas por meio de jogos, sempre colocando nosso cliente em primeiro lugar.</p>
+      </div>
+      <div class="mvv-card">
+        <h3>Visão</h3>
+        <p>Estamos sempre em busca de evolução, buscando ser uma referência no mercado de jogos e melhorar continuamente como empresa.</p>
+      </div>
+      <div class="mvv-card">
+        <h3>Valores</h3>
+        <p>Promover um ambiente inclusivo e diverso, onde cada pessoa se sinta respeitada e valorizada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="container">
+    <h2>Contato</h2>
+    <form>
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu Email" required>
+      <textarea placeholder="Sua Mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Local -->
+  <section id="local" class="container">
+    <h2>Nosso Local</h2>
+    <iframe src="https://maps.google.com/maps?q=Av.%20Moema,%20538%20-%20Planalto%20Paulista&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p>© 2025 Codimbus Games - Todos os direitos reservados</p>
+    <div class="nuvens"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
