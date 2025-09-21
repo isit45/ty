@@ -1,34 +1,32 @@
+// ======= CARROSSEL =======
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
+const slidesContainer = document.querySelector(".slides");
+const carrosselContainer = document.querySelector(".carrossel-container");
 
 function mostrarSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
   
-  const container = document.querySelector(".carrossel-container");
-  const containerWidth = container.offsetWidth;
+  const containerWidth = carrosselContainer.offsetWidth;
   const slide = slides[slideIndex];
   const slideWidth = slide.offsetWidth;
 
-  // Centraliza exatamente o slide atual
-  const slideOffset = slide.offsetLeft; 
-  const offset = -slideOffset + (containerWidth - slideWidth) / 2;
+  // Centraliza o slide atual
+  const offset = -slide.offsetLeft + (containerWidth - slideWidth) / 2;
+  slidesContainer.style.transform = `translateX(${offset}px)`;
 
-  document.querySelector(".slides").style.transform = `translateX(${offset}px)`;
-
-  // Reseta flips ao mudar slide
-  slides.forEach(s => {
+  // Reseta flips e controla visibilidade
+  slides.forEach((s, index) => {
     const inner = s.querySelector('.flip-inner');
     if (inner) inner.classList.remove('flipped');
-  });
-  // Corrige visibilidade dos slides
-  slides.forEach((slide, index) => {
-    slide.style.opacity = index === slideIndex ? '1' : '0';
-    slide.style.pointerEvents = index === slideIndex ? 'auto' : 'none';
+    s.style.opacity = index === slideIndex ? '1' : '0';
+    s.style.pointerEvents = index === slideIndex ? 'auto' : 'none';
   });
 }
 
+// Eventos dos controles
 prev.addEventListener("click", (e) => {
   e.stopPropagation();
   mostrarSlide(slideIndex - 1);
@@ -39,7 +37,7 @@ next.addEventListener("click", (e) => {
   mostrarSlide(slideIndex + 1);
 });
 
-// Flip on Click
+// Flip ao clicar no slide
 slides.forEach(slide => {
   slide.addEventListener('click', (e) => {
     if (e.target.classList.contains('prev') || e.target.classList.contains('next')) return;
@@ -53,7 +51,10 @@ setInterval(() => {
   mostrarSlide(slideIndex + 1);
 }, 5000);
 
-// MENU HAMBÚRGUER
+// Mostra o slide inicial
+mostrarSlide(slideIndex);
+
+// ======= MENU HAMBÚRGUER =======
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
