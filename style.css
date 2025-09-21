@@ -238,9 +238,27 @@ header nav a:hover {
 }
 
 /* Sobre */
-.sobre p {
-  max-width: 800px;
+#jogo{
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+#jogo .card{
+  background: #1a1a1a;
+  color: #fff;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center; 
+}
+
+#jogo .card p{
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
 /* Seção MVV */
@@ -264,8 +282,8 @@ header nav a:hover {
   gap: 30px;
 }
 
-.mvv-card {
-  background-color: #000;
+.mvv-card { 
+  background-color: #1a1a1a;
   color: #fff;
   border-radius: 15px;
   padding: 20px;
