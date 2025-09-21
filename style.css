@@ -10,7 +10,7 @@ body {
   background: linear-gradient(to bottom, #1a1a1a 0%, #2a0a5a 100%);
   color: #fff;
   line-height: 1.6;
-  
+  background-attachment: fixed;
 }
 
 img {
@@ -392,3 +392,4 @@ iframe {
     text-align: center;
   }
 }
+
