@@ -5,13 +5,21 @@ const next = document.querySelector(".next");
 
 function mostrarSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
-  const slideWidth = slides[0].offsetWidth + 80; // Largura do slide + margin-right
-  const containerWidth = document.querySelector(".carrossel-container").offsetWidth;
-  const offset = -slideIndex * slideWidth + (containerWidth - slideWidth) / 2;
+  
+  const container = document.querySelector(".carrossel-container");
+  const containerWidth = container.offsetWidth;
+  const slide = slides[slideIndex];
+  const slideWidth = slide.offsetWidth;
+
+  // Centraliza exatamente o slide atual
+  const slideOffset = slide.offsetLeft; 
+  const offset = -slideOffset + (containerWidth - slideWidth) / 2;
+
   document.querySelector(".slides").style.transform = `translateX(${offset}px)`;
+
   // Reseta flips ao mudar slide
-  slides.forEach(slide => {
-    const inner = slide.querySelector('.flip-inner');
+  slides.forEach(s => {
+    const inner = s.querySelector('.flip-inner');
     if (inner) inner.classList.remove('flipped');
   });
   // Corrige visibilidade dos slides
