@@ -13,7 +13,7 @@ body {
   background-attachment: fixed;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -31,12 +31,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-}
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #a64dff;
 }
 
 header .logo img {
@@ -69,10 +63,9 @@ header nav a:hover {
 }
 
 .carrossel-container {
-  max-width: 90vw; /* Mais fluido, ajusta à tela */
+  max-width: 90vw;
   margin: 0 auto;
   position: relative;
-  height: auto; /* Sua config */
   overflow: hidden;
 }
 
@@ -85,22 +78,21 @@ header nav a:hover {
 
 .slide {
   aspect-ratio: 3 / 2;
-  min-width: 1200px; /* Ajustado pra ser mais largo e fluido */
+  min-width: 1200px;
   width: 1200px;
   position: relative;
   background: #1a1a1a;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  height: 100%;
-  overflow: hidden;
-  margin-right: 80px; /* Sua config */
+  margin-right: 80px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .slide img {
   width: 100%;
-  height: 100%; /* Sua config */
+  height: 100%;
   max-height: 800px;
   object-fit: cover;
   border-top-left-radius: 15px;
@@ -111,8 +103,8 @@ header nav a:hover {
   padding: 1rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  position: relative;
   margin: 1rem;
+  position: relative;
 }
 
 /* Flip Effect */
@@ -133,7 +125,8 @@ header nav a:hover {
   transform: rotateY(180deg);
 }
 
-.flip-front, .flip-back {
+.flip-front,
+.flip-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -151,8 +144,6 @@ header nav a:hover {
   transform: rotateY(180deg);
   background: #2a0a5a;
   color: #fff;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 2rem;
 }
@@ -164,14 +155,14 @@ header nav a:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 40px; /* Aumentado pra afastar as setas */
+  padding: 0 40px;
   transform: translateY(-50%);
   z-index: 10;
 }
 
 .controles span {
   cursor: pointer;
-  font-size: 6rem; /* Mantido seu tamanho */
+  font-size: 6rem;
   color: #a64dff;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
@@ -207,7 +198,6 @@ header nav a:hover {
   color: #a64dff;
   margin-bottom: 2rem;
   font-size: 2rem;
-  text-align: center;
 }
 
 /* Equipe */
@@ -232,19 +222,19 @@ header nav a:hover {
 
 .card img {
   width: 100%;
-  height: 200px; /* Mantido pra padronizar */
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-/* Sobre */
-#jogo{
+/* Sobre a empresa */
+#jogo {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
 }
 
-#jogo .card{
+#jogo .card {
   background: #1a1a1a;
   color: #fff;
   width: 100%;
@@ -252,27 +242,20 @@ header nav a:hover {
   margin: 0 auto;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
-#jogo .card p{
+#jogo .card p {
   font-size: 1.4rem;
   line-height: 1.6;
 }
 
-/* Seção MVV */
+/* MVV */
 #mvv {
   text-align: center;
   margin: 60px auto;
   max-width: 1200px;
-}
-
-#mvv h2 {
-  color: #a64dff;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .mvv-cards {
@@ -282,7 +265,7 @@ header nav a:hover {
   gap: 30px;
 }
 
-.mvv-card { 
+.mvv-card {
   background-color: #1a1a1a;
   color: #fff;
   border-radius: 15px;
@@ -304,7 +287,6 @@ header nav a:hover {
   line-height: 1.5;
 }
 
-/* Responsividade MVV */
 @media (max-width: 900px) {
   .mvv-cards {
     flex-direction: column;
@@ -321,7 +303,8 @@ form {
   margin: 0 auto;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   padding: 0.8rem;
   border: none;
   border-radius: 5px;
@@ -351,7 +334,7 @@ iframe {
 }
 
 /* Footer */
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -362,12 +345,12 @@ iframe {
   font-size: 0.9rem;
 }
 
-.footer .sociais{
+.footer .sociais {
   display: flex;
   gap: 20px;
 }
 
-.footer .nuvens{
+.footer .nuvens {
   text-align: center;
 }
 
@@ -379,7 +362,6 @@ iframe {
   color: #a64dff;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   header {
     flex-direction: row;
