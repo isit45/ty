@@ -49,7 +49,7 @@ slides.forEach(slide => {
 // Auto play
 setInterval(() => {
   mostrarSlide(slideIndex + 1);
-}, 5000);
+}, 10000);
 
 // Mostra o slide inicial
 mostrarSlide(slideIndex);
