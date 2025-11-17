@@ -269,7 +269,7 @@ header nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .mvv-card {
@@ -277,7 +277,7 @@ header nav a:hover {
   color: #fff;
   border-radius: 15px;
   padding: 20px;
-  width: 280px;
+  width: 300px;
   min-height: 180px;
   display: flex;
   flex-direction: column;
@@ -290,7 +290,7 @@ header nav a:hover {
 }
 
 .mvv-card p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -397,5 +397,92 @@ iframe {
 
   header nav ul li {
     text-align: center;
+  }
+}
+
+/* ======================== */
+/* NOVOS ESTILOS DE CONTATO */
+/* ======================== */
+
+/* Wrapper principal que cria as duas colunas */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar para mobile */
+  justify-content: space-between;
+  gap: 3rem; /* Espaço entre as colunas */
+  max-width: 1100px; /* Limita a largura total */
+  margin: 0 auto; /* Centraliza o wrapper no container */
+  text-align: left; /* Alinha o texto da esquerda (que era centrado pelo .container) */
+}
+
+/* Coluna da esquerda (infos) e direita (form) */
+.contact-info,
+.contact-form {
+  flex: 1; /* Faz as duas colunas dividirem o espaço */
+  min-width: 300px; /* Largura mínima antes de quebrar */
+}
+
+/* Estilização da coluna de informações */
+.contact-info h3 {
+  font-size: 1.75rem;
+  color: #a64dff; /* Cor roxa do seu tema */
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Cada item de informação (ícone + texto) */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaço entre ícone e texto */
+  margin-bottom: 1.5rem;
+}
+
+/* Estilização dos ícones SVG */
+.info-item svg {
+  width: 28px;
+  height: 28px;
+  color: #a64dff; /* Cor roxa do seu tema */
+  flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+/* Estilização dos links e textos de contato */
+.info-item a,
+.info-item span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  word-break: break-all; /* Quebra emails longos se necessário */
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+  color: #c48eff;
+}
+
+/* Ajuste no formulário (o seu CSS original já funciona bem) */
+.contact-form form {
+  margin: 0; /* Remove o 'margin: 0 auto' se a coluna ficar muito larga */
+}
+
+/* Responsividade para a seção de Contato */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column; /* Empilha as colunas em telas menores */
+    text-align: center; /* Centraliza o título e parágrafo no mobile */
+  }
+
+  .contact-info {
+    text-align: left; /* Mantém os itens de info alinhados à esquerda */
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form form {
+    margin: 0 auto; /* Recentraliza o formulário no mobile */
   }
 }
